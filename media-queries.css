@@ -1,0 +1,44 @@
+@media screen and (max-width: 767px) {
+  .header-superior, .publicidad, .site-menu, .cotizaciones, .header-inferior {
+    display: none;
+  }
+  .title{
+    font-size: 28px;
+    margin-left: 33px;
+  }
+  .nota-label{
+    font-size: 12px;
+  }
+  .nota-fecha{
+    font-size: .75rem;
+  }
+  .nota-body{
+    margin-left: 23px;
+  }
+  .menu-footer{
+    display: initial;
+  }
+  .header-inferior-mobile{
+    display: inline;
+    height: 50px;
+    margin-bottom: 100px;
+  }
+  .logo{
+    width: 100px;
+  }
+  .header-inferior-contain{
+    margin-bottom: 50px;
+  }
+  .header-inferior-icon{
+    justify-content: space-between;
+    align-items: center;
+    flex-basis: 100%;
+    display: flex;
+  }
+  .header-inferior-icon{
+    background-color: #ae73db;
+  }
+}
+
+
+
