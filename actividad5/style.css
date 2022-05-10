@@ -1,3 +1,18 @@
+body{
+    margin: 0!important;
+}
+header{
+    top: 0;
+    right: 0;
+    left: 0;
+}
+.header-inferior-mobile{
+    display: none;
+}
+.nota{
+    max-width: 640px;
+    margin: 0 auto;
+}
 .header-superior{
     background: #414042;
     height: 37px;
@@ -66,7 +81,7 @@ ul{
 
 .title{
     color: #6b00be;
-    margin-left: 25%;
+    margin-left: 7%;
     max-width: 880px;
     font-weight: 600;
     font-size: 3.125rem;
@@ -74,7 +89,7 @@ ul{
 }
 
 .nota-label {
-    margin-left: 25%;
+    margin-left: 7%;
     padding: 4px 9px;
     background-color: #414042;
     color: #fff;
@@ -96,7 +111,7 @@ aside{
 }
 .publicidad{
     float: left;
-    margin-left: 10%;
+    margin-left: -105%;
     height: 1500px;
     width: 260px;
     background:#58595b;
@@ -107,12 +122,9 @@ section{
 .follow{
     float: right;
 }
-nota-body{
-    max-width:800px
-}
+
 .nota-body .autor{
     display: flex;
-    margin-left: 39px
 }
 .nota .nota-img img {
     width: 100%;
@@ -195,6 +207,7 @@ footer{
     background: linear-gradient(to right, rgba(78,0,190,1) 0%,rgba(165,0,190,1) 100%);
     color: #fff;
     height: 200px;
+    width: 100%;
 }
 
 .inner-contain {
@@ -215,5 +228,10 @@ footer{
 .menu-footer p{
     padding-left: 10px;
     padding-right: 10px;;    
+}
+
+.nota-body{
+    max-width:800px;
+    margin-left: -27%;
 }
 
