@@ -48,10 +48,10 @@
         </section>
         <section >
             <div class="title-suscribirse">
-                <h3>Suscribirse</h3>
+                <h1 style="font-style: bold;">Suscribirse</h1>
             </div>
             <div class="content-form">
-                <form action="" id="formulario" method="post">
+                <form action="javascript:void(0);" id="formulario" method="post">
                     <div class="form-label">
                         <div>
                             <label>Nombre:</label>
@@ -80,15 +80,15 @@
                         <div>
                             <label>Telefono:</label>
                             <input id="telefono" type="text" name="telefono">
-                            <p id="telefonoError" class="hiddenError">Telefono invalido</p>
+                            <p id="telefonoError" class="hiddenError">Debe contener 7 caracteres, no acepta guiones, espacios o parentesis</p>
                         </div>
                         <div>
                             <label>Direccion:</label>
                             <input id="direccion" type="text" name="direccion">    
-                            <p id="direccionError" class="hiddenError">direccion invalida</p>
+                            <p id="direccionError" class="hiddenError">Debe contener 5 caracteres y 1 espacio</p>
                         </div>
                     </div>
-                    <div>
+                    <div class="button-submit">
                         <input type="submit" value="Enviar">
                     </div>
             </div>

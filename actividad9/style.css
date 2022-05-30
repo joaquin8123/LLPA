@@ -86,6 +86,7 @@ footer{
     margin: 20px;
     display: flex;
     flex-flow: row;
+    margin-bottom: 10px;
     margin-right: 10px;
 }
 .form-label input {
@@ -97,9 +98,15 @@ footer{
 
 .form-label p {
     color: #ff0000;
+    max-width: 250px;
 }
 .hiddenError{
     display: none;
+}
+
+.button-submit{
+    display: flex;
+    justify-content: center;
 }
 
 @media screen and (min-width: 475px) and (max-width: 1023px){
@@ -109,7 +116,7 @@ footer{
         height: 50px;
         align-items:center ;
     }
-    p{
+    .card p{
         display: none;
     }
     .navigation a {
@@ -132,13 +139,23 @@ footer{
         height: 40px;
         bottom: 100%;
     }
+    .form-label p {
+        color: #ff0000;
+    }
+    .hiddenError{
+        display: none;
+    }
+    .button-submit{
+        display: flex;
+        justify-content: center;
+    }
 }
 
 @media all and (max-width: 475px) {
     .navigation li{
         display: none;   
     }
-    p{
+    .card p{
         display: none;
     }
     .navigation{
@@ -195,6 +212,14 @@ footer{
         height: 40px;
         bottom: 0;
     }
-    
- 
+    .form-label p {
+        color: #ff0000;
+    }
+    .hiddenError{
+        display: none;
+    }
+    .button-submit{
+        display: flex;
+        justify-content: center;
+    }
 }

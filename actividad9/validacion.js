@@ -34,16 +34,16 @@ window.onload = function() {
   password.addEventListener('focus', clearPasswordError);
   
   //valid telefono
-  telefono.addEventListener('blur', validateCity);
-  telefono.addEventListener('focus', clearCityError);
+  telefono.addEventListener('blur', validateTelefono);
+  telefono.addEventListener('focus', clearTelefonoError);
 
   //valid direccion
-  direccion.addEventListener('blur', validateCity);
-  direccion.addEventListener('focus', clearCityError);
+  direccion.addEventListener('blur', validateDireccion);
+  direccion.addEventListener('focus', clearDireccionError);
 
   // Clear error function
   function clearNombreError(e) {
-    console.log('clearNombreError')
+    console.log('clearNombreError',nombreError)
     nombreError.classList.add('hiddenError');
   }
 
@@ -62,8 +62,19 @@ window.onload = function() {
     passError.classList.add('hiddenError');
   }
 
+  function clearTelefonoError(e) {
+    console.log('clearPasswordError')
+    telefonoError.classList.add('hiddenError');
+  }
+
+  function clearDireccionError(e) {
+    console.log('clearDireccionError')
+    direccionError.classList.add('hiddenError');
+  }
+
   // Validation function
   function validateNombre(e) {
+    console.log('validateNombre', nombreError)
     if(nombre.value.length < 3) {
         nombreError.classList.remove('hiddenError');
     }
@@ -88,4 +99,20 @@ window.onload = function() {
       passError.classList.remove('hiddenError');
     } 
   }
+
+  function validateTelefono(e) {
+    let telefonoRegex =  /^\d{0,10}(\.\d{0,2})?$/;
+    if (telefono.value.length < 7 || !telefonoRegex.test(telefono.value) || telefono.value.indexOf(' ') != -1 || telefono.value.indexOf('(') != -1 || telefono.value.indexOf(')') != -1 || telefono.value.indexOf('-') != -1){
+      telefonoError.classList.remove( 'hiddenError');
+    } 
+  }
+
+  function validateDireccion(e) {
+    let direccionRegex = /^[A-Za-z0-9\s]+$/g;
+    let cantEspacios = direccion.value.split(" ").length - 1
+    if (direccion.value.length < 5 || !direccionRegex.test(direccion.value) || cantEspacios > 1) {
+      console.log(cantEspacios)
+      direccionError.classList.remove('hiddenError');
+    } 
+  } 
 }
